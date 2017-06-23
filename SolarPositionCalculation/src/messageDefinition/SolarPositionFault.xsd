@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--adding faultHandling-->
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         xmlns:tns="http://schemas.hu.fnt.nl/berichten/fault"
         targetNamespace="http://schemas.hu.fnt.nl/berichten/fault"

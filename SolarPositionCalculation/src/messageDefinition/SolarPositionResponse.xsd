@@ -5,7 +5,9 @@
     <xs:element name="solarPositionResponse" type="tns:response"/>
     <xs:complexType name="response">
         <xs:all minOccurs="1" maxOccurs="1">
+            <!--azimuth describes the rotation (north, east, south, west) in precise numbers-->
             <xs:element name="azimuth" type="xs:double"/>
+            <!--zenithAngle describes the angle from the horizon (positive: above the horizon, negative: under the horizon)-->
             <xs:element name="zenithAngle" type="xs:double"/>
         </xs:all>
     </xs:complexType>

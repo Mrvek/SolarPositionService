@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Request-->
 <xs:schema xmlns="http://schemas.hu.fnt.nl/berichten/request"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:req="http://schemas.hu.fnt.nl/berichten/request"
            targetNamespace="http://schemas.hu.fnt.nl/berichten/request">
     <xs:element name="solarPositionRequest" type="req:request"/>
     <xs:complexType name="request">
+        <!--year from 1950 till 3000 as these are standards for the calculationFormula-->
+        <!--year, month, day, hour and minute all separate for ease of input and ease of xsd limitations-->
         <xs:all minOccurs="1">
             <xs:element name="year">
                 <xs:simpleType>
@@ -47,6 +50,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
+            <!--min and max in range of latitude and longitude itself-->
             <xs:element name="latitude">
                 <xs:simpleType>
                     <xs:restriction base="xs:double">
@@ -63,6 +67,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
+            <!--elevation for precision of relative calculation-->
             <xs:element name="elevation">
                 <xs:simpleType>
                     <xs:restriction base="xs:double">
